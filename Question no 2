@@ -1,0 +1,22 @@
+#include <iostream>
+ using namespace std;
+ int main() {
+    string input;
+    cout << "Enter a string: ";
+    getline(cin, input);
+    string queue;
+    string word;
+    for (int i = 0; i < input.length(); i++) {
+        if
+ (input[i] == ' ') {
+            queue += "Q" + to_string(i + 1) + "-" + word + " ";
+            word.clear();
+        }
+ else {
+            word += input[i];
+        }
+    }
+    queue += "Q" + to_string(input.length()) + "-" + word;
+    cout << "Concatenated queue: " << queue << endl;
+    return 0;
+ }
